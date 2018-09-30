@@ -9,7 +9,7 @@
         <meta property="og:title" content="Wittyhacks 2.0 | January 11 - 13, 2019 @ Indore">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://wittyhacks.in">
-        <!-- <meta property="og:image" content="https://hackWittyhacks.co/assets/img/fb-og.png"> -->
+        <meta property="og:image" content="assets/img/fb-og.png">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
         <meta property="og:description" content="WittyHacks is a fun, competitive and productive hackathon to be organized in January 2019.WittyHacks is a hackathon hosted at the WittyFeed office in Indore. Build your team and develop a product during a time span of 36 hours.">
@@ -19,7 +19,7 @@
         <meta name="twitter:title" content="Wittyhacks">
         <meta name="twitter:description" content="WittyHacks is a fun, competitive and productive hackathon to be organized in January 2019.WittyHacks is a hackathon hosted at the WittyFeed office in Indore. Build your team and develop a product during a time span of 36 hours.">
         <meta name="twitter:domain" content="http://wittyhacks.in">
-        <!-- <meta name="twitter:image:src" content="https://hackWittyhacks.co/assets/img/twitter-og.png"> -->
+        <meta name="twitter:image:src" content="assets/img/twitter-og.png">
         <meta name="description" content="Wittyhacks 2.0: Central India's biggest community hackathon.">
         <meta name="keywords" content="wittyhacks, wittyhacks hackathon, hackathon, hackathon ideas, hackathon indore, hackathon india, hackathon hackers india, indore, community, hackathon community, developer community, developer relations, api, sdk, hardware hackathon, hardware hacks, technology, startups, innovation, hacks">
         <meta name="author" content="Wittyhacks Team">
@@ -44,7 +44,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json"> -->
         <meta name="msapplication-TileColor" content="#046fc2">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <!-- <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"> -->
         <meta name="theme-color" content="#046fc2">
         <meta name="google-site-verification" content="TKQ8HcsX3fYhICvUmUQ8IQs5gE8pyfkFlNPCSzbjYso" />
         <!-- Latest compiled and minified CSS -->
@@ -68,23 +68,11 @@
             width: 100%;
             height: 100%;
             opacity: 1;
-            background: 0 0;
+            z-index: -1;
         }
         </style>
     </head>
     <body>
-        <!-- <div class="elem">
-            <div class="d1 dia ring b"></div>
-            <div class="d2 dia b"></div>
-            <div class="d3 dia b"></div>
-            <div class="d4 dia ring b"></div>
-            <div class="c1 circ ring y"></div>
-            <div class="c2 circ ring y"></div>
-            <div class="c3 circ y"></div>
-            <div class="r3 rect ring r"></div>
-            <div class="r2 rect ring r"></div>
-            <div class="r1 rect r"></div>
-        </div> -->
         <div id=cells></div>
         <nav class="navbar navbar-fixed-top">
             <div class="container">
@@ -92,13 +80,14 @@
                 <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <img class="" src="assets/img/logo.png" alt="Wittyhacks Logo" style="width: 115px;">
                     <ul class="nav navbar-nav navbar-right uppercase">
                         <li><a class="nav-pills" href="#home">home</a></li>
                         <li><a class="nav-pills" href="#about">about</a></li>
                         <li><a class="nav-pills" href="#schedule">schedule</a></li>
                         <li><a class="nav-pills" href="#faq">faq</a></li>
                         <li><a class="nav-pills" href="#sponsors">sponsors</a></li>
-                        <li><a class="nav-pill btn-dashboard" href="https://app.hackWittyhacks.co/">my dashboard</a></li>
+                        <li><a class="nav-pill btn-dashboard" href="https://goo.gl/forms/TH539lPhC8ScsU2k1" target="_blank">Volunteer</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -109,14 +98,14 @@
             <section id="home" class="container text-center pt-100">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
-                        <img class="main-logo" src="assets/img/logo.png" alt="Wittyhacks Logo">
+                        <img class="main-logo" src="assets/img/wittyhacks_filllogo.png" alt="Wittyhacks Logo">
                         <h2 class="pt-25">January 11 - 13, 2019</h2>
                         <address>
-                            <p><a href="https://goo.gl/L1P11G" target="_blank">WittyFeed HQ, Indore</a></p>
+                            <p><a href="https://goo.gl/maps/GvNSFebGHoL2" target="_blank">WittyFeed HQ, Indore</a></p>
                         </address>
                         <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 pt-25">
                             <p class="l2" style="background: #1071f2; padding: 10px; color: #fff">Applications will open soon</p>
-                            <p class="l2" style="line-height: 1.2">See you in the next edition!</p>
+                            <!-- <p class="l2" style="line-height: 1.2">See you in the next edition!</p> -->
                             <div class="pt-50"></div>
                         </div>
                     </div>
@@ -130,7 +119,7 @@
                         <p class="bg-white">Wittyhacks prides itself on being Central India’s biggest community hackathon. Since its inception in 2018, Wittyhacks has been a platform where technology leaders and the brightest minds come together to collaborate on building tools that solve real problems.</p>
                     </div>
                     <div class="col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 pt-50">
-                        <img src="https://cdn.wittyfeed.com/assets_main_new/wittyhacks/assets/img/about.png" alt="hero image" class="img-fold">
+                        <img src="assets/img/about.jpg" alt="hero image" class="img-fold">
                         <img src="https://cdn.wittyfeed.com/assets_main_new/wittyhacks/assets/img/fold.svg" alt="hero image" class="fold-reverse"></div>
                     <div class="col-sm-8 col-sm-offset-2 pt-50">
                         <p class="bg-white">With big breakthroughs in the past edition, our team is thrilled to host its second in the Cleanest City of India”, Indore. We are all set to make Wittyhacks a bigger success than any of the previous iterations. We bring you…</p>
@@ -615,7 +604,7 @@
                                         <div class="acc-section">
                                             <div class="acc-content">
                                                 <p>If you're looking to be a volunteer or mentor (i.e. someone with technical skills who'd be willing to help out participants during the weekend), you should reach out to us at
-                                                    <a href="https://goo.gl/forms/TDGOdAqUiV3teWmu2">Volunteer Registration Form</a>. If your company is interested in becoming a sponsor, Fill up the <a href="https://goo.gl/forms/wEbRtx0mMtisAbOL2">Sponsorship form</a>.</p>
+                                                    <a href="https://goo.gl/forms/TDGOdAqUiV3teWmu2" target="_blank">Volunteer Registration Form</a>. If your company is interested in becoming a sponsor, Fill up the <a href="https://goo.gl/forms/wEbRtx0mMtisAbOL2" target="_blank">Sponsorship form</a>.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -721,13 +710,13 @@
                                 <p>...thanks a lot</p>
                             </div>
                         </div>
-                        <p class="bg-white">Interested in becoming a sponsor? Email us at <a href="mailto:wittyhacks@gmail.com?subject=Wittyhacks%204.0%20Sponsorship">wittyhacks@gmail.com</a></p>
+                        <p class="bg-white">Interested in becoming a sponsor? Email us at <a href="mailto:wittyhacks@gmail.com?subject=Wittyhacks%202.0%20Sponsorship">wittyhacks@gmail.com</a></p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="display: none;">
                     <div class="col-lg-12">
                         <h1 class="section-heading sponsor-heading">SPONSORS</h1>
-                        <div class="text-center bg-white sponsors">
+                        <div class="text-center bg-white sponsors" style="display: none;">
                             <a href="http://www.go.co/HackWittyhacks/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor" src="assets/img/dotco.svg" alt=".co logo"></a>
                             <div class="vertical-align" style="justify-content: center"><a href="https://gnosis.pm/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xl" src="assets/img/gnosis.svg" alt="Gnosis logo" style="height: 120px"> </a><a href="https://phonepe.com/en/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xl" src="assets/img/phonepe.svg" alt="PhonePe logo"></a></div>
                             <div class="vertical-align" style="justify-content: center"><a href="https://automattic.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/automattic.png" alt="Automattic logo"> </a><a href="https://consensys.net/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/consensys.svg" alt="Consensys logo"></a></div>
@@ -736,7 +725,7 @@
                             <div class="vertical-align" style="justify-content: center"><a href="https://fly.io/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xs" src="assets/img/flyio.svg" alt="Fly logo"> </a><a href="https://about.gitlab.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xs" src="assets/img/gitlab.svg" alt="GitLab logo"></a></div>
                         </div>
                         <h2 class="section-heading sponsor-heading">PARTNERS</h2>
-                        <div class="text-center bg-white sponsors">
+                        <div class="text-center bg-white sponsors" style="display: none;">
                             <div class="vertical-align" style="justify-content: center"><a href="http://www.ycombinator.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/yc.svg" alt="Y Combinator logo"> </a><a href="https://www.cowrks.com/locations/bengaluru/ecoworld?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/cowrks.svg" alt="Cowrks logo" style="height: 100px"></a></div>
                         </div>
                     </div>
@@ -775,11 +764,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <img class="footer-logo pt-50" src="assets/img/logo.svg">
-                        </figure>
-                        <figure class="footer-back text-center">
-                            <h3 class="pt-50">You found us!</h3>
-                            <img class="footer-logo pt-50" src="assets/img/logo.svg">
+                            <img class="footer-logo pt-50" src="assets/img/logo.png">
                         </figure>
                     </div>
                 </div>
