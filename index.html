@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Wittyhacks 2.0 | January 11 - 13, 2019</title>
         <meta property="fb:app_id" content="133680194095743">
         <meta property="og:title" content="Wittyhacks 2.0 | January 11 - 13, 2019 @ Indore">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://wittyhacks.in">
-        <!-- <meta property="og:image" content="https://hackinout.co/assets/img/fb-og.png"> -->
+        <!-- <meta property="og:image" content="https://hackWittyhacks.co/assets/img/fb-og.png"> -->
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
         <meta property="og:description" content="WittyHacks is a fun, competitive and productive hackathon to be organized in January 2019.WittyHacks is a hackathon hosted at the WittyFeed office in Indore. Build your team and develop a product during a time span of 36 hours.">
@@ -19,13 +19,17 @@
         <meta name="twitter:title" content="Wittyhacks">
         <meta name="twitter:description" content="WittyHacks is a fun, competitive and productive hackathon to be organized in January 2019.WittyHacks is a hackathon hosted at the WittyFeed office in Indore. Build your team and develop a product during a time span of 36 hours.">
         <meta name="twitter:domain" content="http://wittyhacks.in">
-        <!-- <meta name="twitter:image:src" content="https://hackinout.co/assets/img/twitter-og.png"> -->
+        <!-- <meta name="twitter:image:src" content="https://hackWittyhacks.co/assets/img/twitter-og.png"> -->
         <meta name="description" content="Wittyhacks 2.0: Central India's biggest community hackathon.">
         <meta name="keywords" content="wittyhacks, wittyhacks hackathon, hackathon, hackathon ideas, hackathon indore, hackathon india, hackathon hackers india, indore, community, hackathon community, developer community, developer relations, api, sdk, hardware hackathon, hardware hacks, technology, startups, innovation, hacks">
         <meta name="author" content="Wittyhacks Team">
         <meta http-equiv="cache-control" content="public">
         <meta http-equiv="expires" content="Friday, 20 August 2019, 00:00:00 GMT">
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        
+        <link rel="shortcut icon" href="assets/img/favicon_small.ico" type="image/x-icon">
+        <link rel="icon" href="assets/img/favicon_small.ico" type="image/x-icon">
+
+       <!--  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -38,17 +42,38 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="/manifest.json"> -->
         <meta name="msapplication-TileColor" content="#046fc2">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#046fc2">
+        <meta name="google-site-verification" content="TKQ8HcsX3fYhICvUmUQ8IQs5gE8pyfkFlNPCSzbjYso" />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="css/styles.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,500,900" rel="stylesheet" crossorigin>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126634241-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-126634241-1');
+        </script>
+        <style>
+            canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            background: 0 0;
+        }
+        </style>
     </head>
     <body>
-        <div class="elem">
+        <!-- <div class="elem">
             <div class="d1 dia ring b"></div>
             <div class="d2 dia b"></div>
             <div class="d3 dia b"></div>
@@ -59,7 +84,8 @@
             <div class="r3 rect ring r"></div>
             <div class="r2 rect ring r"></div>
             <div class="r1 rect r"></div>
-        </div>
+        </div> -->
+        <div id=cells></div>
         <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,7 +98,7 @@
                         <li><a class="nav-pills" href="#schedule">schedule</a></li>
                         <li><a class="nav-pills" href="#faq">faq</a></li>
                         <li><a class="nav-pills" href="#sponsors">sponsors</a></li>
-                        <li><a class="nav-pill btn-dashboard" href="https://app.hackinout.co/">my dashboard</a></li>
+                        <li><a class="nav-pill btn-dashboard" href="https://app.hackWittyhacks.co/">my dashboard</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -83,13 +109,13 @@
             <section id="home" class="container text-center pt-100">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
-                        <img class="main-logo" src="assets/img/logo.png" alt="InOut Logo">
-                        <h2 class="pt-25">October 7 - 8, 2017</h2>
+                        <img class="main-logo" src="assets/img/logo.png" alt="Wittyhacks Logo">
+                        <h2 class="pt-25">January 11 - 13, 2019</h2>
                         <address>
-                            <p><a href="https://goo.gl/L1P11G" target="_blank">CoWrks, Bangalore</a></p>
+                            <p><a href="https://goo.gl/L1P11G" target="_blank">WittyFeed HQ, Indore</a></p>
                         </address>
                         <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 pt-25">
-                            <p class="l2" style="background: #1071f2; padding: 10px; color: #fff">Applications are closed.</p>
+                            <p class="l2" style="background: #1071f2; padding: 10px; color: #fff">Applications will open soon</p>
                             <p class="l2" style="line-height: 1.2">See you in the next edition!</p>
                             <div class="pt-50"></div>
                         </div>
@@ -101,13 +127,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <p class="bg-white">InOut prides itself on being India’s biggest community hackathon. Since its inception in 2015, InOut has been a platform where technology leaders and the brightest minds come together to collaborate on building tools that solve real problems.</p>
+                        <p class="bg-white">Wittyhacks prides itself on being Central India’s biggest community hackathon. Since its inception in 2018, Wittyhacks has been a platform where technology leaders and the brightest minds come together to collaborate on building tools that solve real problems.</p>
                     </div>
-                    <div class="col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 pt-50"><img src="../assets/img/about.png" alt="hero image" class="img-fold"> <img src="../assets/img/fold.svg" alt="hero image" class="fold-reverse"></div>
+                    <div class="col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 pt-50">
+                        <img src="https://cdn.wittyfeed.com/assets_main_new/wittyhacks/assets/img/about.png" alt="hero image" class="img-fold">
+                        <img src="https://cdn.wittyfeed.com/assets_main_new/wittyhacks/assets/img/fold.svg" alt="hero image" class="fold-reverse"></div>
                     <div class="col-sm-8 col-sm-offset-2 pt-50">
-                        <p class="bg-white">With big breakthroughs in the past three editions, our team is thrilled to host its fourth in the “Silicon Valley of India”, Bangalore. We are all set to make InOut 4.0 a bigger success than any of the previous iterations. We bring you…</p>
+                        <p class="bg-white">With big breakthroughs in the past edition, our team is thrilled to host its second in the Cleanest City of India”, Indore. We are all set to make Wittyhacks a bigger success than any of the previous iterations. We bring you…</p>
                         <div class="text-center">
-                            <p class="large-text">30</p>
+                            <p class="large-text">36</p>
                             <p class="uppercase semilarge-text">hours<br>of ... &nbsp;&nbsp;&nbsp;</p>
                         </div>
                         <div class="text-center bg-white">
@@ -122,52 +150,56 @@
             </div>
             <div class="container pt-100 about-sec">
                 <div class="row vertical-align">
-                    <div class="col-sm-6 col-lg-6 img-wrap"><img src="assets/img/about-1.jpg" alt="inout image" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold"></div>
+                    <div class="col-sm-6 col-lg-6 img-wrap"><img src="assets/img/about-1.jpg" alt="Wittyhacks image" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold"></div>
                     <div class="col-sm-6 col-lg-6 text-block-padding">
                         <div class="talk-wrap">
                             <div class="talk-bubble">
                                 <p>everyone is welcome...</p>
                             </div>
                         </div>
-                        <p class="bg-white">Whether you’re writing your first lines of HTML, building a VR app or a hoverboard, InOut is just the place for you. We will have workshops and mentors to help make your idea happen. You will be able to exhibit your skills without worrying about any mortal needs. We will take care of everything :)</p>
+                        <p class="bg-white">Whether you’re writing your first lines of HTML, building a VR app or a hoverboard, Wittyhacks is just the place for you. We will have workshops and mentors to help make your idea happen. You will be able to exhibit your skills without
+                            worrying about any mortal needs. We will take care of everything :)</p>
                     </div>
                 </div>
                 <div class="row vertical-align pt-100">
-                    <div class="col-sm-6 col-lg-6 img-wrap col-lg-push-6 col-sm-push-6"><img src="assets/img/about-2.jpg" alt="inout images" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold-reverse"></div>
+                    <div class="col-sm-6 col-lg-6 img-wrap col-lg-push-6 col-sm-push-6"><img src="assets/img/about-2.jpg" alt="Wittyhacks images" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold-reverse"></div>
                     <div class="col-sm-6 col-lg-6 text-block-padding col-lg-pull-6 col-sm-pull-6">
                         <div class="talk-wrap talk-wrap-right">
                             <div class="talk-bubble talk-bubble-right">
                                 <p>...to make new friends</p>
                             </div>
                         </div>
-                        <p class="bg-white">InOut provides a brilliant opportunity for you and your team to forge professional contacts and make new friends. With over 250 developers and designers gathering from all over the country in Bangalore, grab your chance of connecting with people to discuss ideas and opportunities.</p>
+                        <p class="bg-white">Wittyhacks provides a brilliant opportunity for you and your team to forge professional contacts and make new friends. With over 250 developers and designers gathering from all over the country in Bangalore, grab your chance of
+                            connecting with people to discuss ideas and opportunities.</p>
                     </div>
                 </div>
                 <div class="row vertical-align pt-100">
-                    <div class="col-sm-6 col-lg-6 img-wrap"><img src="assets/img/about-3.jpg" alt="inout images" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold"></div>
+                    <div class="col-sm-6 col-lg-6 img-wrap"><img src="assets/img/about-3.jpg" alt="Wittyhacks images" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold"></div>
                     <div class="col-sm-6 col-lg-6 text-block-padding">
                         <div class="talk-wrap">
                             <div class="talk-bubble">
                                 <p>...learn</p>
                             </div>
                         </div>
-                        <p class="bg-white">Hackathons are a great way to give back to the community. Mentoring beginners is always helpful for them and rewarding for us. We’re going to have mentors from a number of different organizations present at the venue. Whenever you’re stuck on a problem or need suggestions they'll always be within a hand’s reach.</p>
+                       <p class="bg-white">Hackathons are a great way to give back to the community. Mentoring beginners is always helpful for them and rewarding for us. We’re going to have mentors from a number of different organizations present at the venue. Whenever you’re stuck on a problem or need suggestions they'll always be within a hand’s reach.</p>
                     </div>
                 </div>
                 <div class="row vertical-align pt-100">
-                    <div class="col-sm-6 col-lg-6 img-wrap col-lg-push-6 col-sm-push-6"><img src="assets/img/about-4.jpg" alt="inout images" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold-reverse"></div>
+                    <div class="col-sm-6 col-lg-6 img-wrap col-lg-push-6 col-sm-push-6"><img src="assets/img/about-4.jpg" alt="Wittyhacks images" class="img-fold"> <img src="assets/img/fold.svg" alt="shadow" class="fold-reverse"></div>
                     <div class="col-sm-6 col-lg-6 text-block-padding col-lg-pull-6 col-sm-pull-6">
                         <div class="talk-wrap talk-wrap-right">
                             <div class="talk-bubble talk-bubble-right">
                                 <p>...build</p>
                             </div>
                         </div>
-                        <p class="bg-white">This year we are inviting not just students but everyone to build on ideas of their choice. Watching software materialize from pure thought, part by part is the closest to experiencing magic we have ever got to. And we’re excited to see that magic happen all over again!</p>
+                        <p class="bg-white">This year we are inviting not just students but everyone to build on ideas of their choice. Watching software materialize from pure thought, part by part is the closest to experiencing magic we have ever got to. And we’re excited
+                            to see that magic happen all over again!</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!--about ends--><!--tracks begin-->
+        <!--about ends-->
+        <!--tracks begin-->
         <div id="tracks" class="pt-100">
             <div class="container">
                 <div class="row">
@@ -191,17 +223,17 @@
                         </div>
                         <img src="assets/img/hero.jpg" alt="sposnors and participants on photo booth">
                     </div>
-                    <!-- <div class="col-sm-8 col-sm-offset-2 pt-100">
-                        <p class="bg-white">Here’s a rough breakdown of the two days you’ll be spending at InOut. A more detailed scheduled will be made available when the hackathon starts.</p>
-                        </div> -->
+                    <div class="col-sm-8 col-sm-offset-2 pt-100" style="display: none;">
+                        <p class="bg-white">Here’s a rough breakdown of the two days you’ll be spending at Wittyhacks. A more detailed scheduled will be made available when the hackathon starts.</p>
+                        </div>
                 </div>
             </div>
         </div>
-        <section id="schedule" class="pt-100">
+        <!-- <section id="schedule" class="pt-100" style="display: none;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <p class="bg-white">Here’s a rough breakdown of the two days you’ll be spending at InOut. A more detailed schedule will be made available close to the event.</p>
+                        <p class="bg-white">Here’s a rough breakdown of the two days you’ll be spending at Wittyhacks. A more detailed schedule will be made available close to the event.</p>
                     </div>
                     <div class="col-sm-8 col-sm-offset-2 schedule bg-white">
                         <div class="col-lg-6">
@@ -311,12 +343,216 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+        <section id="schedule" class="pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <p class="bg-white">Here’s a rough breakdown of the two days you’ll be spending at Wittyhacks. A more detailed schedule will be made available close to the event.</p>
+                    </div>
+                    <div class="col-sm-11 col-sm-offset-1 schedule bg-white">
+                        <div class="col-lg-4">
+                            <div class="talk-wrap" style="margin-left: -28px">
+                                <div class="talk-bubble">
+                                    <p>Jan 11, Friday</p>
+                                </div>
+                            </div>
+                            <table class="table table-schedule">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time morning"></p>
+                                        </td>
+                                        <td>
+                                            <strong>07:00 PM</strong>
+                                        </td>
+                                        <td>Check-In</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time morning"></p>
+                                        </td>
+                                        <td>
+                                            <strong>08:00 PM</strong>
+                                        </td>
+                                        <td>Kickoff</td>
+                                    </tr>
+                                    <td>
+                                        <p class="schedule-time noon"></p>
+                                    </td>
+                                    <td>
+                                        <strong>08:30 PM</strong>
+                                    </td>
+                                    <td>Ice Breakers</td>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time noon"></p>
+                                        </td>
+                                        <td>
+                                            <strong>09:30 PM</strong>
+                                        </td>
+                                        <td>Dinner</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time noon"></p>
+                                        </td>
+                                        <td>
+                                            <strong>02:30 PM</strong>
+                                        </td>
+                                        <td>Tech Talk</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time night"></p>
+                                        </td>
+                                        <td>
+                                            <strong>09:30 PM</strong>
+                                        </td>
+                                        <td>Dinner</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="talk-wrap" style="margin-left: -28px">
+                                <div class="talk-bubble">
+                                    <p>Jan 12, Saturday</p>
+                                </div>
+                            </div>
+                            <table class="table table-schedule">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time night"></p>
+                                        </td>
+                                        <td>
+                                            <strong>02:00 AM</strong>
+                                        </td>
+                                        <td>Midnight Snacks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time morning"></p>
+                                        </td>
+                                        <td>
+                                            <strong>08:00 AM</strong>
+                                        </td>
+                                        <td>Breakfast</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time noon"></p>
+                                        </td>
+                                        <td>
+                                            <strong>12:00 PM</strong>
+                                        </td>
+                                        <td>Lunch</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time evening"></p>
+                                        </td>
+                                        <td>
+                                            <strong>05:00 PM</strong>
+                                        </td>
+                                        <td>Tech Talks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time evening"></p>
+                                        </td>
+                                        <td>
+                                            <strong>07:15 PM</strong>
+                                        </td>
+                                        <td>Hacking Resumes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time night"></p>
+                                        </td>
+                                        <td>
+                                            <strong>09:00 PM</strong>
+                                        </td>
+                                        <td>Dinner!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+            <div class="col-lg-4">
+                            <div class="talk-wrap" style="margin-left: -28px">
+                                <div class="talk-bubble">
+                                    <p>Jan 13, Sunday</p>
+                                </div>
+                            </div>
+                            <table class="table table-schedule">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time night"></p>
+                                        </td>
+                                        <td>
+                                            <strong>02:00 AM</strong>
+                                        </td>
+                                        <td>Midnight Snacks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time morning"></p>
+                                        </td>
+                                        <td>
+                                            <strong>08:00 AM</strong>
+                                        </td>
+                                        <td>Hacking Stops</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time noon"></p>
+                                        </td>
+                                        <td>
+                                            <strong>9:00 AM</strong>
+                                        </td>
+                                        <td>Presentations</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time evening"></p>
+                                        </td>
+                                        <td>
+                                            <strong>11:00 AM</strong>
+                                        </td>
+                                        <td>Winners ..!</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time evening"></p>
+                                        </td>
+                                        <td>
+                                            <strong>11:30 AM</strong>
+                                        </td>
+                                        <td>Networking</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="schedule-time night"></p>
+                                        </td>
+                                        <td>
+                                            <strong>12:30 PM</strong>
+                                        </td>
+                                        <td>GoodBye!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="faq" class="pt-100">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <p class="bg-white">At InOut, we strive to bring together developers to participate in the hackathon irrespective of gender, race, sexual orientation, socioeconomic background or ethnicity. We usually try to keep things simple. Read our FAQs to phase out ambiguity.</p>
+                        <p class="bg-white">At Wittyhacks, we strive to bring together developers to participate in the hackathon irrespective of gender, race, sexual orientation, socioeconomic background or ethnicity. We usually try to keep things simple. Read our FAQs to phase out ambiguity.</p>
                     </div>
                     <div class="col-lg-6">
                         <!--acc begins-->
@@ -335,7 +571,8 @@
                                         <h3>How does the application process work?</h3>
                                         <div class="acc-section">
                                             <div class="acc-content">
-                                                <p>We’re looking for people who "do"! Folks who are passionate enough to work on crazy world-changing ideas. Tell us what makes you apply to InOut, what excites you, accomplishments you are proud of and whatever else you think can strengthen your chances of acceptance. We’ll get to know more about your abilities from the past projects, GitHub profile, participation/awards in other hackathons.</p>
+                                                <p>We’re looking for people who "do"! Folks who are passionate enough to work on crazy world-changing ideas. Tell us what makes you apply to Wittyhacks, what excites you, accomplishments you are proud of and whatever else you think can strengthen your
+                                                    chances of acceptance. We’ll get to know more about your abilities from the past projects, GitHub profile, participation/awards in other hackathons.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -351,7 +588,9 @@
                                         <h3>What if I don’t have a team or an idea?</h3>
                                         <div class="acc-section">
                                             <div class="acc-content">
-                                                <p>Not to worry, most people don’t! We’ll have team formation and ideation events geared towards helping you find people to work with. You can join our <a href="https://www.facebook.com/groups/inoutconnect/" target="_blank">Facebook Group</a> to find potential teammates.</p>
+                                                <p>Not to worry, most people don’t! We’ll have team formation and ideation events geared towards helping you find people to work with. You can join our
+                                                    <a href="https://www.facebook.com/groups/566138917058696/" target="_blank">Facebook Group</a>
+                                                    to find potential teammates.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -375,7 +614,8 @@
                                         <h3>I don’t want to hack, can I still get involved?</h3>
                                         <div class="acc-section">
                                             <div class="acc-content">
-                                                <p>If you're looking to be a volunteer or mentor (i.e. someone with technical skills who'd be willing to help out participants during the weekend), you should reach out to us at <a href="mailto:mentor@hackinout.co">mentor@hackinout.co</a>. If your company is interested in becoming a sponsor, check out the sponsorship section below.</p>
+                                                <p>If you're looking to be a volunteer or mentor (i.e. someone with technical skills who'd be willing to help out participants during the weekend), you should reach out to us at
+                                                    <a href="https://goo.gl/forms/TDGOdAqUiV3teWmu2">Volunteer Registration Form</a>. If your company is interested in becoming a sponsor, Fill up the <a href="https://goo.gl/forms/wEbRtx0mMtisAbOL2">Sponsorship form</a>.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -401,7 +641,7 @@
                                         <h3>How much does it cost?</h3>
                                         <div class="acc-section">
                                             <div class="acc-content">
-                                                <p>Zero. Zip. Zilch. Nada. Nothing. Admission to InOut is completely free, thanks to our sponsors! We'll provide you with a weekend's worth of schwag, meals, drinks, snacks and a place to crash when you need a break from coding.</p>
+                                                <p>Zero. Zip. Zilch. Nada. Nothing. Admission to Wittyhacks is completely free, thanks to our sponsors! We'll provide you with a weekend's worth of schwag, meals, drinks, snacks and a place to crash when you need a break from coding.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -409,7 +649,7 @@
                                         <h3>How big can a team be?</h3>
                                         <div class="acc-section">
                                             <div class="acc-content">
-                                                <p>You can form teams of up to 3 people. Most teams aim to have a mix of people with both design and developer skills.</p>
+                                                <p>You can form teams of up to 4 people. Most teams aim to have a mix of people with both design and developer skills.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -430,7 +670,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <h3>What do I get by attending InOut?</h3>
+                                        <h3>What do I get by attending Wittyhacks?</h3>
                                         <div class="acc-section">
                                             <div class="acc-content">
                                                 <p>Pretty much everything from socializing with fellow hacker community to internship/job offers from the coolest tech companies. And yeah we’ll have prizes for 1st, 2nd, 3rd place, as well as the best hardware hack, and many other company sponsored prizes. We had well over ₹10,00,000 worth of prizes up for grab last time! Most of all, you will gain an unparalleled learning experience and memories for a lifetime!</p>
@@ -442,7 +682,7 @@
                                         <div class="acc-section">
                                             <div class="acc-content">
                                                 <p class="faq-twitter">
-                                                    <a href="https://twitter.com/hackinoutco" target="_blank">
+                                                    <a href="https://twitter.com/wittyhacks" target="_blank">
                                                         <span>
                                                             <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
                                                                 <path class="twitter" d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z" fill-rule="nonzero"/>
@@ -452,13 +692,13 @@
                                                     </a>
                                                 </p>
                                                 <p class="faq-mail">
-                                                    <a href="mailto:mail@hackinout.co" target="_blank">
+                                                    <a href="mailto:wittyhacks@gmail.com" target="_blank">
                                                         <span>
                                                             <svg viewBox="0 0 32 23" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M19.959 12.614l11.314 9.758c-.412.387-.965.627-1.574.627h-27.397c-.612 0-1.167-.237-1.579-.623l11.319-9.762 3.959 3.486 3.959-3.486zm-3.959 1.186l-15.273-13.173c.412-.387.965-.627 1.574-.627h27.397c.612 0 1.167.237 1.579.623l-15.278 13.177zm16 7.327l-11.046-9.446 11.046-9.668v19.113zm-32 0v-19.107l11.046 9.662-11.046 9.446z" fill-rule="nonzero" fill="#0067FF"/>
                                                             </svg>
                                                         </span>
-                                                        mail@hackinout.co
+                                                        wittyhacks@gmail.com
                                                     </a>
                                                 </p>
                                             </div>
@@ -481,23 +721,23 @@
                                 <p>...thanks a lot</p>
                             </div>
                         </div>
-                        <p class="bg-white">Interested in becoming a sponsor? Email us at <a href="mailto:sponsor@hackinout.co?subject=InOut%204.0%20Sponsorship">sponsor@hackinout.co</a></p>
+                        <p class="bg-white">Interested in becoming a sponsor? Email us at <a href="mailto:wittyhacks@gmail.com?subject=Wittyhacks%204.0%20Sponsorship">wittyhacks@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="section-heading sponsor-heading">SPONSORS</h1>
                         <div class="text-center bg-white sponsors">
-                            <a href="http://www.go.co/HackInOut/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor" src="assets/img/dotco.svg" alt=".co logo"></a>
-                            <div class="vertical-align" style="justify-content: center"><a href="https://gnosis.pm/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xl" src="assets/img/gnosis.svg" alt="Gnosis logo" style="height: 120px"> </a><a href="https://phonepe.com/en/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xl" src="assets/img/phonepe.svg" alt="PhonePe logo"></a></div>
-                            <div class="vertical-align" style="justify-content: center"><a href="https://automattic.com/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/automattic.png" alt="Automattic logo"> </a><a href="https://consensys.net/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/consensys.svg" alt="Consensys logo"></a></div>
-                            <div class="vertical-align" style="justify-content: center"><a href="https://www.digitalocean.com/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-md" src="assets/img/digitalocean.svg" alt="DigitalOcean logo"></a></div>
-                            <div class="vertical-align" style="justify-content: center"><a href="https://wingify.com/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-sm" src="assets/img/wingify.png" alt="Wingify logo" style="width: 160px; padding-top: 24px"> </a><a href="https://www.cloudflare.com/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-sm" src="assets/img/cloudfare.svg" alt="Cloudflare logo"></a></div>
-                            <div class="vertical-align" style="justify-content: center"><a href="https://fly.io/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xs" src="assets/img/flyio.svg" alt="Fly logo"> </a><a href="https://about.gitlab.com/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xs" src="assets/img/gitlab.svg" alt="GitLab logo"></a></div>
+                            <a href="http://www.go.co/HackWittyhacks/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor" src="assets/img/dotco.svg" alt=".co logo"></a>
+                            <div class="vertical-align" style="justify-content: center"><a href="https://gnosis.pm/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xl" src="assets/img/gnosis.svg" alt="Gnosis logo" style="height: 120px"> </a><a href="https://phonepe.com/en/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xl" src="assets/img/phonepe.svg" alt="PhonePe logo"></a></div>
+                            <div class="vertical-align" style="justify-content: center"><a href="https://automattic.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/automattic.png" alt="Automattic logo"> </a><a href="https://consensys.net/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/consensys.svg" alt="Consensys logo"></a></div>
+                            <div class="vertical-align" style="justify-content: center"><a href="https://www.digitalocean.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-md" src="assets/img/digitalocean.svg" alt="DigitalOcean logo"></a></div>
+                            <div class="vertical-align" style="justify-content: center"><a href="https://wingify.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-sm" src="assets/img/wingify.png" alt="Wingify logo" style="width: 160px; padding-top: 24px"> </a><a href="https://www.cloudflare.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-sm" src="assets/img/cloudfare.svg" alt="Cloudflare logo"></a></div>
+                            <div class="vertical-align" style="justify-content: center"><a href="https://fly.io/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xs" src="assets/img/flyio.svg" alt="Fly logo"> </a><a href="https://about.gitlab.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-xs" src="assets/img/gitlab.svg" alt="GitLab logo"></a></div>
                         </div>
                         <h2 class="section-heading sponsor-heading">PARTNERS</h2>
                         <div class="text-center bg-white sponsors">
-                            <div class="vertical-align" style="justify-content: center"><a href="http://www.ycombinator.com/?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/yc.svg" alt="Y Combinator logo"> </a><a href="https://www.cowrks.com/locations/bengaluru/ecoworld?utm_source=hackinout&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/cowrks.svg" alt="Cowrks logo" style="height: 100px"></a></div>
+                            <div class="vertical-align" style="justify-content: center"><a href="http://www.ycombinator.com/?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/yc.svg" alt="Y Combinator logo"> </a><a href="https://www.cowrks.com/locations/bengaluru/ecoworld?utm_source=hackWittyhacks&utm_medium=website" rel="noopener noreferrer" target="_blank"><img class="logo-sponsor-lg" src="assets/img/cowrks.svg" alt="Cowrks logo" style="height: 100px"></a></div>
                         </div>
                     </div>
                 </div>
@@ -510,7 +750,7 @@
                         <figure class="footer-front text-center">
                             <h3 class="pt-50">See you in next edition!</h3>
                             <div class="social-icons">
-                                <a href="https://twitter.com/hackinoutco" target="_blank">
+                                <a href="https://twitter.com/wittyhacks" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
                                         <g fill="none">
                                             <path class="social twitter" d="M35.286 23.003c-2.763 9.547-12.742 15.046-22.289 12.283s-15.046-12.743-12.283-22.289c2.763-9.547 12.742-15.046 22.289-12.283s15.046 12.743 12.282 22.289h.001z"/>
@@ -518,7 +758,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="https://www.facebook.com/hackinout/" target="_blank">
+                                <a href="https://www.facebook.com/wittyhacks/" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
                                         <g fill="none">
                                             <path class="social facebook" d="M35.286 23.003c-2.763 9.547-12.742 15.046-22.289 12.283s-15.046-12.743-12.282-22.289c2.763-9.547 12.742-15.046 22.289-12.283s15.046 12.743 12.282 22.289z"/>
@@ -526,29 +766,11 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="https://www.linkedin.com/company/hack-inout" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-                                        <g fill="none">
-                                            <path class="social linkedin" d="M35.286 23.003c-2.763 9.547-12.742 15.046-22.289 12.283s-15.046-12.743-12.282-22.289c2.763-9.547 12.742-15.046 22.289-12.283s15.046 12.743 12.282 22.289z"/>
-                                            <path fill="#FFF" d="M23.777 10h-11.52c-1.246 0-2.257 1.01-2.257 2.256v11.52c0 1.246 1.01 2.257 2.257 2.257h11.52c1.246 0 2.257-1.011 2.257-2.257v-11.52c0-1.246-1.01-2.256-2.257-2.256zm-8.431 12.811l-.081.182-.181.081h-1.854l-.181-.081-.081-.182v-6.507l.081-.181.181-.081h1.854l.181.081.081.181v6.507zm-.302-7.877c-.242.242-.537.363-.887.363-.349 0-.645-.121-.886-.363-.242-.242-.363-.537-.363-.886 0-.336.121-.625.363-.867.255-.255.551-.383.886-.383.336 0 .631.128.887.383.242.242.363.531.363.867 0 .349-.121.645-.363.886zm8.18 7.877c0 .067-.027.128-.081.182-.054.054-.114.081-.181.081h-1.894l-.181-.081-.081-.182v-3.969c0-.336-.06-.598-.181-.786-.148-.161-.39-.242-.725-.242-.43 0-.739.127-.927.383-.175.255-.262.618-.262 1.088v3.525c0 .067-.027.128-.081.182-.054.054-.114.081-.181.081h-1.854l-.181-.081-.081-.182v-6.507l.081-.181.181-.081h1.793l.161.04.081.141v.101l.02.041v.161c.443-.43 1.054-.645 1.833-.645.873 0 1.545.208 2.015.625.484.443.725 1.081.725 1.914v4.392h.001z"/>
-                                        </g>
-                                    </svg>
-                                </a>
-                                <a href="https://www.instagram.com/hackinoutco/" target="_blank">
+                                <a href="https://www.instagram.com/wittyhacks/" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
                                         <g fill="none">
                                             <path class="social instagram" d="M35.286 23.003c-2.763 9.547-12.742 15.046-22.289 12.283s-15.046-12.743-12.282-22.289c2.763-9.547 12.742-15.046 22.289-12.283s15.046 12.743 12.282 22.289z"/>
                                             <path fill="#FFF" d="M23.06 13.849c0 .374-.225.71-.571.853-.346.143-.744.064-1.009-.2-.265-.264-.344-.661-.201-1.007.143-.345.481-.57.855-.57.511 0 .925.413.926.923v.001zm2.94 4.17v.012l-.053 3.348c-.028 2.511-2.062 4.54-4.579 4.568l-3.368.053h-.012l-3.356-.052c-2.517-.028-4.551-2.057-4.579-4.568l-.053-3.36v-.012l.052-3.349c.029-2.511 2.062-4.54 4.579-4.568l3.368-.053h.012l3.356.052c2.517.028 4.551 2.057 4.579 4.568l.053 3.36.001.001zm-1.49 0l-.052-3.337c-.019-1.707-1.402-3.086-3.113-3.106l-3.345-.052-3.345.052c-1.711.019-3.094 1.398-3.113 3.106l-.052 3.337.052 3.337c.019 1.707 1.402 3.086 3.113 3.106l3.345.052 3.345-.052c1.711-.019 3.094-1.398 3.113-3.106l.052-3.337zm-2.402 0c0 1.658-1.001 3.152-2.536 3.786-1.535.634-3.302.284-4.477-.888-1.175-1.172-1.526-2.935-.891-4.466.636-1.531 2.134-2.53 3.796-2.53 2.268.003 4.106 1.836 4.108 4.098zm-1.49 0c0-1.057-.638-2.009-1.616-2.413-.978-.404-2.105-.181-2.854.566-.749.747-.973 1.871-.568 2.847s1.36 1.613 2.419 1.613c1.445-.002 2.617-1.17 2.618-2.612l.001-.001z"/>
-                                        </g>
-                                    </svg>
-                                </a>
-                                <a href="http://slack.hackinout.co" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-                                        <g fill="none">
-                                            <path class="social slack" d="M35.286 23.003c-2.763 9.547-12.742 15.046-22.289 12.283s-15.046-12.743-12.283-22.289c2.763-9.547 12.742-15.046 22.289-12.283s15.046 12.743 12.282 22.289h.001z"/>
-                                            <g fill="#FFF">
-                                                <path d="M16.718 18.117l2.142-.718.694 2.069-2.142.718zM25.491 16.573c-1.656-5.52-4.043-6.803-9.562-5.147-5.519 1.656-6.803 4.043-5.147 9.562 1.656 5.519 4.043 6.803 9.562 5.147 5.519-1.656 6.803-4.043 5.147-9.562zm-2.785 3.581l-1.04.347.359 1.078c.141.437-.09.911-.526 1.053-.09.025-.193.051-.282.039-.334-.013-.655-.231-.77-.565l-.359-1.078-2.143.719.359 1.078c.141.437-.09.911-.526 1.052-.09.026-.193.052-.282.039-.334-.013-.655-.231-.77-.564l-.359-1.078-1.04.346c-.09.026-.193.052-.282.039-.334-.013-.655-.231-.77-.564-.141-.437.09-.912.526-1.053l1.04-.347-.693-2.066-1.04.347c-.09.026-.193.051-.282.039-.334-.013-.655-.231-.77-.565-.141-.436.09-.911.526-1.052l1.04-.347-.359-1.078c-.141-.437.09-.911.526-1.052.436-.142.911.09 1.052.526l.359 1.078 2.143-.719-.359-1.078c-.141-.436.09-.911.526-1.052.436-.141.911.09 1.052.526l.359 1.078 1.04-.347c.436-.141.911.09 1.052.526.141.436-.09.911-.526 1.052l-1.04.347.693 2.066 1.04-.347c.436-.141.911.09 1.052.526.141.437-.09.911-.526 1.052v-.001z"/>
-                                            </g>
                                         </g>
                                     </svg>
                                 </a>
@@ -564,22 +786,16 @@
             </div>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><script type="text/javascript" src="js/accordionjs.min.js"></script><script type="text/javascript" src="js/main.min.js"></script><!-- Latest compiled and minified JavaScript --><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src=js/matter.min.js></script>
+        <script src=js/main.min2.js></script>
         <script>// (function () { new AccordionJS(); })();
             var accordion = new TINY.accordion.slider('accordion');
             var accordion2 = new TINY.accordion.slider('accordion2');
             accordion.init('nested', 'h3', 1, -1, 'selected');
             accordion2.init('nested2', 'h3', 1, -1, 'selected');
         </script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126634241-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-126634241-1');
-        </script>
+        
+        
 
     </body>
 </html>
